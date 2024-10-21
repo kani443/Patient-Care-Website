@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nurse Details Form - Healthcare Jobs Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .form-container {
+            width: 100%;
+            max-width: 500px;
+            margin: 50px auto;
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #bdc3c7;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div  class="form-container">
+        <h1>Provide Your Qualifications and Experience</h1>
+        
+        {{msg}}
+        <form action="/nurse_details"  method="POST">
+            <label for="qualification">Education Qualification:</label>
+            <input type="text" id="qualification" name="qualification" required>
+
+            <label for="experience">Experience (years):</label>
+            <input type="text" id="experience" name="experience" required>
+
+            <label for="desired_location">Desired Job Location:</label>
+            <input type="text" id="desired_location" name="desired_location" required>
+
+            <label for="contact">Contact Details:</label>
+            <input type="tel" id="contact" name="contact" pattern="[0-9]{10}" required>
+            
+            <label for="desired_salary">Desired Salary:</label>
+            <input type="tel" id="desired_salary" name="desired_salary" pattern="[0-9]{1,}">
+
+            <input type="submit" value="Submit">
+            <br>
+          
+        </form>
+          <a href="/nurse_dashboard" method="GET">Go back to Dashboard</a>
+    </div>
+</body>
+</html>

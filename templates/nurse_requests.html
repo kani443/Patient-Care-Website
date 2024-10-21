@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nurse Requests</title>
+</head>
+<body>
+    <h1>Nurse Requests</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nurse Name</th>
+            <th>Nurse Email</th>
+            <th>Qualifications</th>
+            <th>Experience</th>
+            <th>Contact</th>
+            <!-- Add other relevant columns -->
+        </tr>
+        {% for item in items %}
+        <tr>
+            <td>{{ item.id }}</td>  <!-- Adjust based on your table structure -->
+            <td>{{ item.name }}</td>
+            <td>{{ item.email }}</td>
+            <td>{{ item.qualification }}</td>
+            <td>{{ item.experience }}</td>
+            <td>{{ item.contact }}</td>
+            <!-- Add other relevant columns -->
+        </tr>
+        {% endfor %}
+    </table>
+    <a href = "/customer_dashboard">Go back to dashboard</a>
+</body>
+</html>

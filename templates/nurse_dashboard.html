@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nurse Dashboard - Healthcare Jobs Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .dashboard-container {
+            width: 90%;
+            max-width: 900px;
+            margin: 50px auto;
+            background-color: #ecf0f1;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .details-section {
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        .details-section h2 {
+            color: #2980b9;
+            margin-bottom: 10px;
+        }
+        .details-section p {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 18px;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Welcome, {{name}}</h1>
+
+        <!-- Nurse Account Information -->
+        <div class="details-section">
+            <h2>Your Account Details:</h2>
+            <p><strong>Name:</strong> {{name}}</p>
+            <p><strong>Email:</strong> {{email}}</p>
+            <p><strong>Contact Number:</strong> {{contact}}</p>
+        </div>
+
+        <div class="details-section">
+            <h2>Healthcare Jobs Portal for Nurses:</h2>
+            <p>This is a portal where nurses can apply for caregiving jobs, update their qualifications, and manage their job applications and profiles.</p>
+        </div>
+
+        <!-- Link to Nurse Qualification and Experience Form -->
+        <a href="/nurse_details" method="GET">Provide Your Qualifications and Experience</a>
+        <a href="/view_your_request_nurse">View your request</a>
+        <a href="/view_all_customer_req">View patient listings</a>
+        <br>
+        <a href="/logout" method=["GET"]>Logout</a>
+    </div>
+</body>
+</html>

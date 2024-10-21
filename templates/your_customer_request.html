@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Patient Request</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h2>Your Patient Request</h2>
+
+    {% if item %}
+        <table>
+            <tr>
+                <th>Email</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Age</th>
+                <th>Location</th>
+                <th>Contact</th>
+                <th>Delete</th>
+            </tr>
+            <tr>
+                <td>{{ item['email'] }}</td>
+                <td>{{ item['name'] }}</td>
+                <td>{{ item['description'] }}</td>
+                <td>{{ item['age'] }}</td>
+                <td>{{ item['location'] }}</td>
+                <td>{{ item['contact'] }}</td>
+                <td><a href="/delete_customer_req">Delete your request</a></td>
+            </tr>
+        </table>
+    {% else %}
+        <p>No request found</p>
+    {% endif %}
+    <br>
+    <a href = "/customer_dashboard">Go back to dashboard</a>
+</body>
+</html>
+
+
