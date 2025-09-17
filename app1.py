@@ -16,7 +16,7 @@ app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'p@d1thuth00ngu'
+app.config['MYSQL_PASSWORD'] = 'password'
 app.config['MYSQL_DB'] = 'pagelogin'
 mysql = MySQL(app)
 
@@ -345,3 +345,4 @@ def delete_customer():
 if __name__ == '__main__':
 
     app.run(debug=False)
+
